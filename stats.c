@@ -9,17 +9,15 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Functions that can analyze an array of unsigned char data items and report analytics on the maximum,minimum,mean and median of the data set.
  *
- * <Add Extended Description Here>
+ *  Functions that can analyze an array of unsigned char data items and report analytics on the maximum,minimum,mean and median of the data set.It also reorder this data set from large to small.After analysis and sorting it prints that data to the screen in nicely formatted presentation.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Prakhar Agrawal
+ * @date 20/05/2020
  *
  */
-
-
 
 #include <stdio.h>
 #include "stats.h"
@@ -39,5 +37,37 @@ void main() {
   /* Statistics and Printing Functions Go Here */
 
 }
+void print_statistics(int array[] , int size)
+{
 
-/* Add other Implementation File Code Here */
+}
+
+void print_array(int array[] , int size)
+{
+
+}
+
+void find_median(int array[] , int size)
+{
+
+}
+
+int find_mean(int array[] , int size)
+{
+
+}
+
+int find_maximum(int array[] , int size)
+{
+
+}
+
+int find_minimum(int array[] , int size)
+{
+
+}
+
+void sort_array(int array[] , int size)
+{
+
+}

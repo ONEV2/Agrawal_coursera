@@ -103,5 +103,4 @@ int find_minimum(int array[] , int size);
  * @return NULL
 */
 void sort_array(int array[] , int size);
-
 #endif /* __STATS_H__ */
