@@ -33,7 +33,7 @@
  *
  * @return NULL
  */
-void print_statistics(int array[] , int size);
+void print_statistics( unsigned char array[] , int size);
  
 /**
  *  @brief prints the array to the screen
@@ -45,7 +45,7 @@ void print_statistics(int array[] , int size);
   
  * @return NULL
  */
-void print_array(int array[] , int size);
+void print_array(unsigned char array[] , int size);
 
 /**
  * @brief returns the median value
@@ -57,7 +57,7 @@ void print_array(int array[] , int size);
  * 
  * @return integer
  */
-void find_median(int array[] , int size); 
+unsigned int find_median(unsigned char array[] , int size); 
 
 /**
  * @brief returns the mean
@@ -69,7 +69,7 @@ void find_median(int array[] , int size);
  *
  * @return integer
  */
-int find_mean(int array[] , int size);
+int find_mean(unsigned char array[] , int size);
 
 /**
  * @brief  returns the maximum
@@ -80,7 +80,7 @@ int find_mean(int array[] , int size);
  * 
  * @return integer
  */
-int find_maximum(int array[] , int size); 
+int find_maximum(unsigned char array[] , int size); 
 
 /**
  * @brief returns the minimum
@@ -91,7 +91,7 @@ int find_maximum(int array[] , int size);
  * 
  * @return integer 
  */
-int find_minimum(int array[] , int size);
+int find_minimum(unsigned char array[] , int size);
 
 /** 
  * @brief sorts the array from largest to smallest
@@ -102,5 +102,5 @@ int find_minimum(int array[] , int size);
  * 
  * @return NULL
 */
-void sort_array(int array[] , int size);
+void sort_array(unsigned char array[] , int size);
 #endif /* __STATS_H__ */

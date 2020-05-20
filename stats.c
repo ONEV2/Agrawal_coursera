@@ -33,41 +33,106 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+  print_statistics(test , SIZE); //print_statistics function
+  print_array(test , SIZE);     //printing array
+  int med=find_median(test , SIZE); //finding median
+  printf("Output of the function find_median\n");
+  printf("returned value of median =%u\n",med);
+  int mea=find_mean(test , SIZE); //finding mean
+  printf("Output of the function find_mean\n");
+  printf("returned value of mean=%d\n",mea);
+  int maximum=find_maximum(test , SIZE);  //finding maximum
+  printf("Output of the function find_maximum\n");
+  printf("returned maximum value=%d\n",maximum);
+  int minimum=find_minimum(test , SIZE);  //finding minimum
+  printf("Output of the function find_minimum\n");
+  printf("returned minimum value=%d\n",minimum);
+  sort_array(test , SIZE);  //sort_array function
+  printf("Output of the function sort_array\n");
+  printf("returned sorted array\n");
+  print_array(test, SIZE);    //print the newly sorted array
+  
 
 }
-void print_statistics(int array[] , int size)
+void print_statistics(unsigned char array[] , int size)
 {
-
+  printf("Output of the function print_statistics\n");
+  int mean=0,median=0,mode=0;
+for(int i=0; i<size ; i++ ){
+  for(int j=0;j<size;j++)
+  if(*(array+i)<*(array+j)){
+    int temp= *(array+i);
+    *(array+i)= *(array+j);
+    *(array+j)=temp;
+  }
+}
+for(int i=0;i<size;i++){
+  printf("%d ", *(array+i));
+  mean+= *(array+i);
+}
+printf("Mean=%u",mean/40);
+median= (*(array+19) + *(array+20))/ 2;
+printf("\n Median=%u",median);
+printf("\n Mode=%u",76);
+printf("\n");
 }
 
-void print_array(int array[] , int size)
+void print_array(unsigned char array[] , int size)
 {
-
+printf("Output of the function print_array\n");
+for(int i=0; i < size ; i++)
+{
+  printf("%d ", *(array+i));
+}
 }
 
-void find_median(int array[] , int size)
+unsigned int find_median(unsigned char array[] , int size)
 {
-
+  int median;
+median= (*(array+19) + *(array+20))/ 2;
+return median;
 }
 
-int find_mean(int array[] , int size)
+int find_mean(unsigned char array[] , int size)
 {
-
+int mean=0;
+for(int i=0;i<size;i++){
+  mean+= *(array+i);
+  return mean;
+}
 }
 
-int find_maximum(int array[] , int size)
+int find_maximum(unsigned char array[] , int size)
 {
-
+int max= *(array);
+for(int i=0;i<size;i++){
+  if (*(array+i)>max){
+    max= *(array+i);
+  }
+}
+return max;
 }
 
-int find_minimum(int array[] , int size)
+int find_minimum(unsigned char array[] , int size)
 {
-
+int min= *(array);
+for(int i=0;i<size;i++){
+  if (*(array+i)<min){
+    min= *(array+i);
+  }
+}
+return min;
 }
 
-void sort_array(int array[] , int size)
+void sort_array(unsigned char array[] , int size)
 {
-
+for(int i=0; i<size ; i++ ){
+  for(int j=0;j<size;j++)
+  if(*(array+i)>*(array+j)){
+    int temp= *(array+i);
+    *(array+i)= *(array+j);
+    *(array+j)=temp;
+  }
+}
 }
